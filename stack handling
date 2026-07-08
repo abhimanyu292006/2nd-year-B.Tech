@@ -1,0 +1,21 @@
+class stack:
+def __init__()
+    self.books=[]
+
+    def push(self,book):
+        self.book.append(book)
+print(book "added to stack")
+
+def pop(self):
+    if self.isEmpty():
+        return"no books in stack"
+        return self.books.pop()
+
+        def peek(self):
+            if self.isEmpty():
+                return"noo books in stack"
+                return self.books[-1]
+
+                def isEmpty(self):
+                    return len(self.books)==0
+                    
