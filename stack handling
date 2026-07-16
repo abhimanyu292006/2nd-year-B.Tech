@@ -1,0 +1,30 @@
+class Stack:
+    def __init__(self):
+        self.books = []
+
+    def push(self, book):
+        self.books.append(book)
+        print(f"{book} added to stack")
+
+    def pop(self):
+        if self.isEmpty():
+            return "No books in stack"
+        return self.books.pop()
+
+    def peek(self):
+        if self.isEmpty():
+            return "No books in stack"
+        return self.books[-1]
+
+    def isEmpty(self):
+        return len(self.books) == 0
+
+
+s = Stack()
+s.push("Python Basics")
+s.push("AI with Python")
+
+print(s.peek())
+print(s.pop())
+print(s.pop())
+print(s.pop())
