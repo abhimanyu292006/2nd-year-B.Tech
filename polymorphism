@@ -1,0 +1,7 @@
+class Bird:
+    def fly(self):
+        return "Bird can fly high."
+
+class Penguin(Bird):
+    def fly(self):
+        return "Penguin cannot fly."
