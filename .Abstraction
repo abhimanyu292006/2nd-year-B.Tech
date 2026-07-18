@@ -12,3 +12,11 @@ class Car(Vehicle):
 class Bike(Vehicle):
     def start(self):
         return "Bike engine started."
+
+
+
+OUTPUT
+c = Car()
+b = Bike()
+print(c.start())   # Car engine started.
+print(b.start())   # Bike engine started.
