@@ -28,3 +28,13 @@ print(s.peek())
 print(s.pop())
 print(s.pop())
 print(s.pop())
+
+
+
+OUTPUT
+Python Basics added to stack
+AI with Python added to stack
+AI with Python
+AI with Python
+Python Basics
+No books in stack
