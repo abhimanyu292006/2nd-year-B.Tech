@@ -5,3 +5,11 @@ class Bird:
 class Penguin(Bird):
     def fly(self):
         return "Penguin cannot fly."
+
+
+
+OUTPUT
+b = Bird()
+p = Penguin()
+print(b.fly())   # Bird can fly high.
+print(p.fly())   # Penguin cannot fly.
