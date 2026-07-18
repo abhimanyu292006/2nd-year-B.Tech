@@ -21,3 +21,11 @@ print(book1)
 print(repr(book1))
 print(book1 == book2)
 print(book1 == book3)
+
+
+
+OUTPUT
+Python Basics by John
+Book('Python Basics', 'John')
+True
+False
