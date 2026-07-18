@@ -11,3 +11,11 @@ class Student:
             self.__age = age
         else:
             print("Invalid age!")
+
+
+
+OUTPUT
+s = Student("Abhimanyu", 21)
+print(s.display())       # Name: Abhimanyu, Age: 21
+s.set_age(22)
+print(s.display())       # Name: Abhimanyu, Age: 22
