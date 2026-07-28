@@ -1,0 +1,49 @@
+# 🏥 Hospital Patient Management System
+
+class Patient:
+    def __init__(self, patient_id, name, treatment_cost, category):
+        self.patient_id = patient_id
+        self.name = name
+        self.treatment_cost = treatment_cost
+        self.category = category  # "General" or "Special"
+
+    def __str__(self):
+        return f"ID: {self.patient_id}, Name: {self.name}, Cost: ₹{self.treatment_cost}, Category: {self.category}"
+
+
+class Hospital:
+    def __init__(self):
+        self.patients = []
+
+    def add_patient(self, patient):
+        self.patients.append(patient)
+
+    def display_records(self):
+        if not self.patients:
+            print("No patient records found.")
+        else:
+            print("\n--- Hospital Patient Records ---")
+            for p in self.patients:
+                print(p)
+
+
+# Example usage
+if __name__ == "__main__":
+    # Create hospital object
+    hospital = Hospital()
+
+    # Add patients
+    hospital.add_patient(Patient("P101", "Abhimanyu", 5000, "General"))
+    hospital.add_patient(Patient("P102", "Riya", 15000, "Special"))
+    hospital.add_patient(Patient("P103", "Arjun", 8000, "General"))
+
+    # Display all records
+    hospital.display_records()
+
+
+
+#OUTPUT
+--- Hospital Patient Records ---
+ID: P101, Name: Abhimanyu, Cost: ₹5000, Category: General
+ID: P102, Name: Riya, Cost: ₹15000, Category: Special
+ID: P103, Name: Arjun, Cost: ₹8000, Category: General
