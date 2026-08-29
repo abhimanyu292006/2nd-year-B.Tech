@@ -1,0 +1,34 @@
+# Coin Change Problem using Dynamic Programming
+
+def coin_change(coins, amount):
+    # Initialize DP array with "infinity"
+    dp = [float('inf')] * (amount + 1)
+    dp[0] = 0  # Base case: 0 coins needed to make amount 0
+
+    # Bottom-up calculation
+    for coin in coins:
+        for i in range(coin, amount + 1):
+            dp[i] = min(dp[i], dp[i - coin] + 1)
+
+    # If dp[amount] is still infinity, no solution exists
+    return dp[amount] if dp[amount] != float('inf') else -1
+
+
+# -------- Main Program --------
+coins = list(map(int, input("Enter coin denominations (space-separated): ").split()))
+amount = int(input("Enter target amount: "))
+
+result = coin_change(coins, amount)
+
+if result == -1:
+    print(f"Cannot make {amount} with given coins.")
+else:
+    print(f"Minimum number of coins required to make {amount}: {result}")
+
+
+
+#OUTPUT
+Enter coin denominations (space-separated): 1 2 5
+Enter target amount: 11
+Minimum number of coins required to make 11: 3
+
